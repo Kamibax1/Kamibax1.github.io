@@ -1,83 +1,125 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-main{
-    width: 100%;
+
+body {
+    width: 100vw;
+    min-height: 100vh;
     background-color: rgb(223, 243, 246);
-}
-.wrapper-main{
-    width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    position: relative;
+
 }
-h1{
+
+header,
+main,
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper-main {
+    width: 100%;
+    max-width: 1320px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+}
+
+h1 {
     font: 20px Montserrat, sans-serif;
 }
-h2{
+
+h2 {
     font: 24px Montserrat, sans-serif;
     margin-left: 10%;
 }
-.grid{
+
+.grid {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     justify-items: center;
     margin-top: 10%;
-    @media (min-width: 600px){
-        grid-template-columns: repeat(2,1fr);
-    }
-    @media (min-width: 900px){
-        grid-template-columns: repeat(3,1fr);
-    }
+    gap: 20px;
 }
-.cell{
-    width: 288px;
-    margin: 5%;
+
+.cell {
+    margin: 20px;
     background-color: rgb(194, 241, 247);
     border-top-right-radius: 50%;
 }
-h4{
+
+h4 {
     font: 20px Montserrat sans-serif;
     margin-left: 5%;
 }
-.img{
+
+.img {
     width: 77px;
     height: 77px;
     background-color: #2692F7;
     border-radius: 50%;
     margin: 5%;
 }
-.text{
+
+.text {
     margin: 5%;
     margin-top: 10%;
     font: 16px Open Sans, sans-serif;
     text-align: left;
     line-height: 1.6;
 }
-.wrapper-header{
+
+.wrapper-header {
+    width: 100%;
+    max-width: 1320px;
     display: flex;
     justify-content: space-between;
     padding-bottom: 10px;
     background-color: rgb(223, 243, 246);
+    padding: 0 10px;
 }
-.logo_image{
+
+.logo_image {
     width: 20px;
     height: 20px;
     border: 2px solid #2692F7;
     margin-right: 5px;
 }
-.logo{
+
+.logo {
     display: flex;
     margin: 5px;
 }
-button{
+
+button {
     background-color: rgb(223, 243, 246);
     border: transparent;
     margin-right: 5px;
 }
-footer{
-    display: flex;
-    justify-content: center;
+
+footer {
     gap: 5px;
-    padding: 16px;
+    position: relative;
+    bottom: 0;
+    padding: 10px;
+}
+
+@media (min-width: 600px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+}
+
+@media (min-width: 900px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+
+    }
 }
