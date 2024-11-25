@@ -6,18 +6,29 @@
     width: 100%;
     height: 120px;
     background-color: #555;
+    position: fixed;
+    top: 325px;
 }
 .car{
     width: 200px;
     height: 75px;
-    background-color: greenyellow;
     position: relative;
     top: 10px;
     left: 10px;
     border-top-left-radius: 75%;
     border-bottom-left-radius: 15%;
     border-bottom-right-radius: 25%;
-    animation: move 3s;
+    animation: moveGreen 3s;
+}
+.carGreen{
+    background-color: greenyellow;
+    animation: moveGreen 3s;  
+}
+.carRed{
+    background-color: red;
+    transform: scale(-1,1);
+    left: calc(100% - 210px);
+    animation: moveRed 3s;
 }
 .left-wheel{
     left: 20px;
@@ -64,12 +75,20 @@
         39% 35%
     );
 }
-@keyframes move{
+@keyframes moveGreen{
     0% {
         left: -200px;
     }
     100% {
         left: calc(100% - 250px);
+    }
+}
+@keyframes moveRed{
+    0% {
+        left: calc(100% - 200px);
+    }
+    100% {
+        left: 50px;
     }
 }
 @keyframes  lights{
